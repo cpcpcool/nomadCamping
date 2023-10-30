@@ -1,10 +1,9 @@
-import { ConfigProvider, Layout, Menu } from 'antd';
 import React, { useState, useEffect } from 'react';
+import { ConfigProvider, Layout, Menu } from 'antd';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-
-
 const { Header } = Layout;
+
 const items1 = [
   {
     key: 'notice',
@@ -18,12 +17,33 @@ const items1 = [
   {
     key: 'mypage',
     label: <a href='/mypage'>마이페이지</a>,
+    className: 'mypageStyle',
+    children: [
+      {
+        type: "group",
+        label: '',
+        key: 'option:1',
+        children: [
+          {
+            label: '예약 확인',
+            key: 'submp:1',
+            className: 'submp1',
+          },
+          {
+            label: '예약 변경/취소',
+            key: 'submp:2',
+            className: 'submp2',
+          },
+          {
+            label: <a href='/mypage'>결제수단 관리</a>,
+            key: 'submp:3',
+            className: 'submp3',
+          },
+        ]
+      },
+    ],
   },
 ];
-
-
-
-
 
 const navbarLiStyle = {
   display: 'inline-block',
@@ -86,6 +106,12 @@ const NavBar = () => {
                 lineType: 'solid',
                 motionEaseIn: .7,
 
+                // sub메뉴에 왜 안먹히는지
+                groupTitleColor: 'rgba(46, 168, 156, 1)',
+                dropdownWidth: 110,
+                groupTitleFontSize: 10,
+                dangerItemColor: '#2fa599',
+                subMenuItemBorderRadius: 12,
 
                 // Alias Token
                 colorBgContainer: '#f6ffed',

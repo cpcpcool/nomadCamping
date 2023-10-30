@@ -1,6 +1,7 @@
 import { AudioOutlined, SearchOutlined } from '@ant-design/icons';
 import React from 'react';
 import { ConfigProvider, Input, Space } from 'antd';
+import Link from 'antd/es/typography/Link';
 
 const { Search } = Input;
 const suffix = (
@@ -20,9 +21,14 @@ const searchButton = (
   />
 );
 
+const handleSearchButton = () => {
+  window.location.href = '/bookIng';
+};
 const onSearch = (value, _e, info) => console.log(info?.source, value);
 
+
 const LandingPage = () => {
+
 
   return (
     <>
@@ -53,17 +59,18 @@ const LandingPage = () => {
           backgroundPosition: 'center center',
         }}>
           <Space size="large">
-            <Search
+            {<Search
               placeholder="  캠핑장 검색"
               allowClear
               enterButton={searchButton}
               size="large"
-              onSearch={onSearch}
+              onSearch={handleSearchButton}
               style={{
                 width: '800px',
                 padding: '190px'
               }}
-            />
+
+            />}
           </Space>
         </div>
         <div style={{ display: 'flex', width: '100%', height: '500px', marginTop: '30px', }}>

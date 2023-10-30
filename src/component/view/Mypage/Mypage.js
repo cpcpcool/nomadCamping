@@ -20,7 +20,7 @@ const items = [
   getItem('마이페이지', '1', <MdAccountBox style={{ fontSize: '2em', }} />, [
     getItem('예약 확인', 'sub1'),
     getItem('예약 변경 / 취소', 'sub2'),
-    getItem('결제수단 관리', 'sub3'),
+    getItem(<a href='/mypage'>결제수단 관리</a>, 'sub3'),
   ]),
 ];
 
