@@ -20,12 +20,13 @@ Login form
 
 공지사항
 
-### Mypage
+### Booking
 
+캠핑예약
+
+### Mypage
 마이페이지 - 결제수단 관리 화면 (default)
 
 ==============================================
 
-### Booking
 
-uncomplete  
