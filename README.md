@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 name : nomadCapming "캠핑유목민"
 purpose : 캠핑장 예약 사이트
 
-{### LandingPage style={color='red',}}
+### LandingPage 
 
 main homepage
 
