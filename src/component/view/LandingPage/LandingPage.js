@@ -48,7 +48,7 @@ const LandingPage = () => {
           width: '100%',
           height: '100%',
           textAlign: 'center',
-          backgroundImage: 'url(./img/BG.jpg)',
+          backgroundImage: 'url(./img/DesignThinking.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
         }}>
