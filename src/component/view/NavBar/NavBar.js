@@ -1,6 +1,8 @@
 import { ConfigProvider, Layout, Menu } from 'antd';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
+
+
 
 const { Header } = Layout;
 const items1 = [
@@ -32,6 +34,22 @@ const navbarLiStyle = {
 };
 
 const NavBar = () => {
+  const [selectedKey, setSelectedKey] = useState('');
+
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    if (currentPath === '/notice') {
+      setSelectedKey('notice');
+    } else if (currentPath === '/booking') {
+      setSelectedKey('booking');
+    } else if (currentPath === '/mypage') {
+      setSelectedKey('mypage');
+    }
+  }, []);
+
+  const handleMenuClick = (e) => {
+    setSelectedKey(e.key);
+  };
 
   return (
     <>
@@ -42,7 +60,7 @@ const NavBar = () => {
           <li style={navbarLiStyle}><a href='/' style={{ color: '#fff', textDecoration: 'none', padding: '5px 10px', borderRadius: '8px 8px 8px 8px', backgroundColor: '#2FA599', }}>사이트맵</a></li>
         </ul>
         <a href='/'>
-          <img style={{ width: '10%', height: '10%', }} src='./img/cmadLogo.png' alt='logo' />
+          <img style={{ width: '204px', height: '132px', }} src='./img/cmadLogo.png' alt='logo' />
         </a>
       </div>
 
@@ -66,9 +84,8 @@ const NavBar = () => {
                 fontSize: '1.5em',
                 lineWidth: 3.2,
                 lineType: 'solid',
-                sizePopupArrow: 16,
-                Link: '/#',
-                colorPrimaryActive: '#2FA599',
+                motionEaseIn: .7,
+
 
                 // Alias Token
                 colorBgContainer: '#f6ffed',
@@ -81,7 +98,13 @@ const NavBar = () => {
               justifyContent: 'center',
               background: '#F6FFED',
               fontWeight: 'bold',
-            }} mode="horizontal" defaultSelectedKeys={[0]} items={items1} >
+            }}
+              mode="horizontal"
+              defaultSelectedKeys={[0]}
+              items={items1}
+              onClick={handleMenuClick}
+              selectedKeys={[selectedKey]}
+            >
             </Menu>
           </ConfigProvider>
         </Header>
