@@ -26,8 +26,6 @@ const items = [
 
 
 
-
-
 function Mypage() {
 
   const {
@@ -57,16 +55,14 @@ function Mypage() {
             <Breadcrumb
               style={{
                 display: 'block',
-                float: 'right',
+                textAlign: 'right',
                 paddingRight: '15px',
                 paddingTop: '20px',
-                height: '15px',
-                lineHeight: '15px',
-
+                float: 'right',
               }}
             >
-              <Breadcrumb.Item><HomeOutlined /> Home</Breadcrumb.Item>
-              <Breadcrumb.Item>마이페이지</Breadcrumb.Item>
+              <Breadcrumb.Item href="/"><HomeOutlined /> Home</Breadcrumb.Item>
+              <Breadcrumb.Item href="/mypage">마이페이지</Breadcrumb.Item>
               <Breadcrumb.Item>결제관리</Breadcrumb.Item>
             </Breadcrumb>
 
@@ -89,16 +85,15 @@ function Mypage() {
                     width: 256,
                     height: '100%',
                   }}
-                  defaultSelectedKeys={['sub3']}
                   defaultOpenKeys={['1']}
+                  defaultSelectedKeys={['sub3']}
                   mode="inline"
                   items={items}
                 />
               </Sider>
               <Content
                 style={{
-
-                  paddingLeft: '100px',
+                  paddingLeft: '220px',
                   minHeight: 280,
                 }}
               >

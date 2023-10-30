@@ -110,7 +110,6 @@ const data = [
 
 const Notice = () => (
   <>
-
     <ConfigProvider
       theme={{
         token: {
@@ -125,24 +124,21 @@ const Notice = () => (
         },
       }}
     >
-      <div style={{ position: 'absolute', right: '0', top: '185px', }}>
-        <Breadcrumb
-          style={{
-            display: 'block',
-            float: 'right',
-            paddingRight: '15px',
-            paddingTop: '20px',
-            height: '15px',
-            lineHeight: '15px',
 
-          }}
-        >
-          <Breadcrumb.Item><HomeOutlined /> Home</Breadcrumb.Item>
-          <Breadcrumb.Item>마이페이지</Breadcrumb.Item>
-          <Breadcrumb.Item>결제관리</Breadcrumb.Item>
-        </Breadcrumb>
-      </div>
+      <Breadcrumb
+        style={{
+          display: 'block',
+          textAlign: 'right',
+          paddingRight: '15px',
+          paddingTop: '20px',
+          float: 'right',
+        }}
+      >
+        <Breadcrumb.Item href="/"><HomeOutlined /> Home</Breadcrumb.Item>
+        <Breadcrumb.Item>공지사항</Breadcrumb.Item>
+      </Breadcrumb>
 
+      <hr style={{ border: '0', }} />
       <div className='searchBox' style={{ textAlign: 'center', marginTop: '80px', }}>
         <Space.Compact
           enterButton={searchButton}

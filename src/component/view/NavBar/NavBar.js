@@ -68,9 +68,7 @@ const NavBar = () => {
                 lineType: 'solid',
                 sizePopupArrow: 16,
                 Link: '/#',
-                lineWidthFocus: 'focus',
-
-
+                colorPrimaryActive: '#2FA599',
 
                 // Alias Token
                 colorBgContainer: '#f6ffed',
@@ -78,13 +76,13 @@ const NavBar = () => {
             }}
           >
 
-              <Menu style={{
-                display: 'flex',
-                justifyContent: 'center',
-                background: '#F6FFED',
-                fontWeight: 'bold',
-              }} mode="horizontal" defaultSelectedKeys={[0]} items={items1} >
-              </Menu>
+            <Menu style={{
+              display: 'flex',
+              justifyContent: 'center',
+              background: '#F6FFED',
+              fontWeight: 'bold',
+            }} mode="horizontal" defaultSelectedKeys={[0]} items={items1} >
+            </Menu>
           </ConfigProvider>
         </Header>
       </Layout>
