@@ -1,11 +1,9 @@
-import { Row } from 'antd';
+import { HomeOutlined, SearchOutlined } from '@ant-design/icons';
+import { Breadcrumb, Button, ConfigProvider, Input, Row, Select, Space, } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import AntCard from "../Commons/AntCard.js";
 import { API_KEY, BASE_URL } from "./../../Config.js";
-import { SearchOutlined } from '@ant-design/icons';
-import { HomeOutlined } from '@ant-design/icons';
-import { Button, ConfigProvider, Input, Select, Space, Table, Tag, Breadcrumb } from 'antd';
 
 function Booking() {
 
@@ -44,7 +42,7 @@ function Booking() {
   const [apiCard, setApiCard] = useState([]);
 
   useEffect(() => {
-    const endpointData = `${BASE_URL}numOfRows=22&pageNo=3&MobileOS=ETC&MobileApp=cmad&serviceKey=${API_KEY}&_type=json`;;
+    const endpointData = `${BASE_URL}numOfRows=18&pageNo=1&MobileOS=ETC&MobileApp=cmad&serviceKey=${API_KEY}&_type=json`;
 
     fetch(endpointData)
       .then(response => response.json())
@@ -54,6 +52,7 @@ function Booking() {
           firstImageUrl: item.firstImageUrl,
           facltNm: item.facltNm,
           addr1: item.addr1,
+          manageNmpr: item.manageNmpr
         }));
         setApiCard(exportCard);
         console.log(apiCard);
@@ -74,7 +73,8 @@ function Booking() {
             borderRadius: 8,
             footerBg: 'rgba(255, 255, 255,.5)',
             bodySortBg: '#2fa599',
-
+            fontFamily: 'S-CoreDream-4Regular',
+            fontWeight: 500,
             // Alias Token
             colorBgContainer: '#fefefe',
           },
@@ -127,6 +127,7 @@ function Booking() {
                     path={card.firstImageUrl}
                     campName={card.facltNm}
                     campAddr={card.addr1}
+                    score={card.manageNmpr}
                     style={{ height: '70px', }}
                   />
                 </React.Fragment>

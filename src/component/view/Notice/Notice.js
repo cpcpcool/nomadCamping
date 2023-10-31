@@ -33,6 +33,7 @@ const columns = [
         theme={{
           token: {
             borderRadius: 12,
+            fontFamily: 'S-CoreDream-4Regular',
           },
         }}
       >
@@ -118,7 +119,7 @@ const Notice = () => (
           borderRadius: 8,
           footerBg: 'rgba(255, 255, 255,.5)',
           bodySortBg: '#2fa599',
-
+          fontFamily: 'S-CoreDream-4Regular',
           // Alias Token
           colorBgContainer: '#fefefe',
         },
@@ -159,6 +160,7 @@ const Notice = () => (
     <ConfigProvider
       theme={{
         token: {
+          fontFamily: 'S-CoreDream-4Regular',
           borderRadius: 0,
           padding: 28,
           bodySortBg: '#2fa599',

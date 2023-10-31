@@ -38,12 +38,7 @@ const LandingPage = () => {
             // Seed Token
             colorPrimary: '#2FA599',
             borderRadius: 8,
-            // fontSize: '1.5em',
-            // lineWidth: 3.2,
-            // lineType: 'solid',
-            // sizePopupArrow: 16,
-            // Link: '/#',
-            // lineWidthFocus: 'focus',
+            fontFamily: 'S-CoreDream-4Regular',
 
             // Alias Token
             colorBgContainer: '#fefefe',
@@ -67,6 +62,7 @@ const LandingPage = () => {
               onSearch={handleSearchButton}
               style={{
                 width: '800px',
+                fontFamily: 'S-CoreDream-4Regular',
                 padding: '190px'
               }}
 

@@ -38,6 +38,7 @@ function Mypage() {
         theme={{
           token: {
             // Seed Token
+            fontFamily: 'S-CoreDream-4Regular',
             colorPrimary: '#2FA599',
             borderRadius: 8,
             groupTitleFontSize: 12,

@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'S-CoreDream-4Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+.App {
+  font-family: 'S-CoreDream-4Regular';
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -34,16 +45,29 @@
   }
 }
 
-/* ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.css-dev-only-do-not-override-1g768w3::after{
-  border: 3px solid #61dafb;
-} */
-
 /* li.ant-menu-overflow-item.ant-menu-item.ant-menu-item-active::after {
   border: 2px solid #2FA599;
   transition: none;
 } */
 
-/* li.ant-menu-overflow-item.ant-menu-item.ant-menu-item-active.ant-menu-item-selected.ant-menu-item-only-child::after {
+/* li.ant-menu-overflow-item.ant-menu-item.ant-menu-item-active.ant-mscenu-item-selected.ant-menu-item-only-child::after {
   border: 2px solid #2FA599;
   transition: none;
+} */
+
+/* 
+li.ant-menu-overflow-item.ant-menu-submenu.ant-menu-submenu-horizontal .div.ant-menu-submenu-title .span.ant-menu-title-content .a {
+  color: #2f  a599;
+}
+
+li.ant-menu-overflow-item.ant-menu-submenu.ant-menu-submenu-horizontal .div.ant-menu-submenu-title .span.ant-menu-title-content .a:active {
+  color: #2fa599;
+}
+
+.mypageStyle {
+  color: #2fa599;
+}
+
+.mypageStyle:active {
+  color: #2fa599;
 } */
